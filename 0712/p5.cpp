@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-    int n;
+    int n; 
     int seconds[20];
     int mQ = 0, yQ = 0, mR = 0, yR = 0;
     int mSum = 0, ySum = 0;
