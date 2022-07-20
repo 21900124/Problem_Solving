@@ -5,28 +5,36 @@
 
 using namespace std;
 
-bool cmp(pair<int, string> a, pair<int,string> b){
-    if(a.first < b.first) return true;
+typedef struct People{
+    int age;
+    string name;
+}People;
+
+vector<People> v;
+
+bool cmp(const People & a, const People & b){
+    if(a.age < b.age) return true;
     return false;
 }
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-
+    
     int n;
 
     cin >> n;
     
-    vector<pair<int, string> > people(n);
+    struct People p[n];
 
     for(int i = 0; i < n; i++){
-        cin >> people[i].first >> people[i].second;
+        cin >> p[i].age >> p[i].name;
+        v.push_back(p[i]);
     }
-    stable_sort(people.begin(),people.end(),cmp);
+    stable_sort(v.begin(),v.end(),cmp);
 
     for(int i = 0; i < n; i++){
-        cout << people[i].first << " " << people[i].second << "\n";
+        cout << v[i].age << " " << v[i].name << "\n";
     }
     return 0;
 }
