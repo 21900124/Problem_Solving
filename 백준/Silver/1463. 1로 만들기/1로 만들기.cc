@@ -1,6 +1,5 @@
 // 1로 만들기
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 
